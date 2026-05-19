@@ -22,3 +22,36 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 ''')
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
+print("You're at a cross road. Where do you want to go?")
+direction = input("\tType \"left\" or \"right\"\n").lower()
+
+#Branch if user selected "left"
+if direction == "left":
+    print("You've come to a lake. There is an island in the middle of the lake.")
+    action = input("\tType \"wait\" to wait for a boat. Type \"swim\" to swim across.\n").lower()
+
+    # Branch if user selected wait.
+    if action == "wait":
+        print("You arrive at the island unharmed. There is a house with 3 doors.")
+        colour = input("\tOne red, one yellow and one blue. Which colour do you choose?\n").lower()
+
+        # Branch for door selected by user.
+        if colour == "red":
+            print("It's a room full of fire. Game Over.")
+        elif colour == "blue":
+            print("You enter a room full of beasts. Game Over.")
+        elif colour == "yellow":
+            print("You found the treasure! You Win!")
+        else:
+            print("You've done the impossible and fallen through reality. Game Over.")
+
+    else:
+        print("You get attacked by an angry trout. Game Over.")
+
+else:
+    print("You fell into a hole. Game Over.")
+
+
+
+
+
